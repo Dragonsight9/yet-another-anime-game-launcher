@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -44,13 +44,13 @@ jobs:
           ./configure.sh
           pnpm run format-check
           pnpm run lint
-          YAAGL_CHANNEL_CLIENT=hk4ecn node ./build-app.js
+          # YAAGL_CHANNEL_CLIENT=hk4ecn node ./build-app.js
           YAAGL_CHANNEL_CLIENT=hk4eos node ./build-app.js
-          YAAGL_CHANNEL_CLIENT=bh3glb node ./build-app.js
-          YAAGL_CHANNEL_CLIENT=hkrpgcn node ./build-app.js
+          # YAAGL_CHANNEL_CLIENT=bh3glb node ./build-app.js
+          # YAAGL_CHANNEL_CLIENT=hkrpgcn node ./build-app.js
           YAAGL_CHANNEL_CLIENT=hkrpgos node ./build-app.js
-          YAAGL_CHANNEL_CLIENT=napcn node ./build-app.js
-          YAAGL_CHANNEL_CLIENT=napos node ./build-app.js
+          # YAAGL_CHANNEL_CLIENT=napcn node ./build-app.js
+          # YAAGL_CHANNEL_CLIENT=napos node ./build-app.js
 
       # - name: Tar app
       #   run: |
